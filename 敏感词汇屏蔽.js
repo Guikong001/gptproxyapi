@@ -13,9 +13,9 @@ async function handleRequest(request) {
 
   const requestBody = await request.clone().text();
   
-  // 检查请求体中是否包含任何敏感词汇
+  // 检查请求体中是否包含屏蔽词
   if (sensitiveWords.some(word => requestBody.includes(word))) {
-    return new Response('请求中包含敏感词汇，无法处理。', { status: 400 });
+    return new Response('请求包含敏感信息，终止会话。', { status: 400 });
   }
 
   const modifiedRequest = new Request(url.toString(), {
