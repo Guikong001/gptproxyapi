@@ -8,6 +8,7 @@ worker.js可以将官方key更换名称使用
 
 - 中转调用测试地址：
 - https://api.wslll.top
+- https://wapi.wslll.top
 
 <br/>
 
